@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- スマートフォン対応 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>雪谷祭スタンプラリー</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         ヘッダー
+    ========================== -->
+    <header class="header">
+        <h1 id="rally-title">QRスタンプラリー</h1>
+        
+    </header>
+
+
+    <!-- =========================
+         メインコンテンツ
+    ========================== -->
+    <main class="main-container">
+
+        
+
+
+        <!-- =========================
+             QRコード読み取り
+        ========================== -->
+        <section class="qr-section">
+
+    <h2>スタンプを獲得する</h2>
+
+    
+
+    <button
+        id="scan-qr-button"
+        type="button">
+        QRコードを読み取る
+    </button>
+
+    <!-- QRコード読み取り画面 -->
+    <div
+        id="qr-reader"
+        hidden>
+    </div>
+
+    <!-- QR読み取り終了ボタン -->
+    <button
+        id="stop-qr-button"
+        type="button"
+        hidden>
+        読み取りを終了
+    </button>
+
+</section>
+
+
+        <!-- =========================
+             スタンプ一覧
+        ========================== -->
+        <section class="stamp-section">
+
+            <h2>スタンプ一覧</h2>
+
+            <div
+                id="stamp-list"
+                class="stamp-list">
+
+                <!--
+                    JavaScriptによって
+                    スタンプを自動生成します。
+                -->
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             メッセージ表示
+        ========================== -->
+        <section
+            id="message-section"
+            class="message-section"
+            hidden>
+
+            <p id="message-text"></p>
+
+        </section>
+
+
+        <!-- =========================
+             リセット
+        ========================== -->
+        <section class="reset-section">
+
+            <button
+                id="reset-button"
+                type="button">
+                スタンプをリセット
+            </button>
+
+        </section>
+
+    </main>
+
+
+    
+
+
+    <!-- JavaScript -->
+        <!-- QRコード読み取りライブラリ -->
+    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html> 

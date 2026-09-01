@@ -1,0 +1,261 @@
+/* =========================
+   全体
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Noto Sans JP",
+        sans-serif;
+
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+
+/* =========================
+   ヘッダー
+========================= */
+
+.header {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: white;
+}
+
+.header h1 {
+    margin: 0 0 10px;
+    font-size: 28px;
+}
+
+.header p {
+    margin: 0;
+    color: #666;
+}
+
+
+/* =========================
+   メイン
+========================= */
+
+.main-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+
+/* =========================
+   セクション
+========================= */
+
+section {
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   QRコード
+========================= */
+
+.qr-section {
+    text-align: center;
+    padding: 25px 20px;
+    background-color: white;
+    border-radius: 12px;
+}
+
+.qr-section h2 {
+    margin-top: 0;
+}
+
+.qr-section p {
+    color: #666;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   QR読み取りボタン
+========================= */
+
+#scan-qr-button {
+    width: 100%;
+    padding: 15px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #333;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+#scan-qr-button:hover {
+    opacity: 0.8;
+}
+
+
+/* =========================
+   スタンプ一覧
+========================= */
+
+.stamp-section h2 {
+    margin-bottom: 15px;
+}
+
+.stamp-list {
+    display: grid;
+
+    /* 横に2～3個並べる */
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+}
+
+
+/* スタンプカード */
+.stamp-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 120px;
+    padding: 10px;
+
+    background-color: white;
+    border-radius: 12px;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+}
+
+
+/* スタンプ名 */
+.stamp-name {
+    font-size: 16px;
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+
+/* 0/1 の表示 */
+.stamp-status {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* =========================
+   獲得済み
+========================= */
+
+.stamp-card.collected {
+    background-color: #e8f5e9;
+}
+
+.stamp-card.collected .stamp-status {
+    color: #2e7d32;
+}
+
+
+/* =========================
+   メッセージ
+========================= */
+
+.message-section {
+    padding: 15px;
+
+    background-color: white;
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+.message-section p {
+    margin: 0;
+}
+
+
+/* =========================
+   リセット
+========================= */
+
+.reset-section {
+    text-align: center;
+}
+
+#reset-button {
+    padding: 10px 20px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    background-color: white;
+    color: #555;
+
+    cursor: pointer;
+}
+
+#reset-button:hover {
+    background-color: #eee;
+}
+
+
+/* =========================
+   フッター
+========================= */
+
+.footer {
+    padding: 20px;
+    text-align: center;
+
+    color: #888;
+    font-size: 13px;
+}
+
+
+/* =========================
+   スマートフォン
+========================= */
+
+@media (max-width: 480px) {
+
+    .header {
+        padding: 25px 15px;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .main-container {
+        width: 94%;
+        margin-top: 20px;
+    }
+
+    .stamp-card {
+        padding: 15px;
+    }
+
+    .stamp-name {
+        font-size: 16px;
+    }
+
+    .stamp-status {
+        font-size: 15px;
+    }
+}
