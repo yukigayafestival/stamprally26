@@ -17,7 +17,7 @@ const stamps = [
     },
     {
         id: "https://yukigayasai2026/scan/4",
-        name: "コンピューター"
+        name: "コンピュータ"
     },
     {
         id: "https://yukigayasai2026/scan/5",
@@ -152,7 +152,7 @@ function displayStamps() {
           document.getElementById("complete-message")
 
           if (collectedStamps.length >= 5) {
-          completionMessage.textContent= `スタンプを${collectedStamps.length}獲得しました。\nCALL室でステッカーを受け取れます`;
+          completeMessage.textContent= `スタンプを5個以上獲得しました。CALL室でステッカーを受け取れます`;
           } 
 
     
