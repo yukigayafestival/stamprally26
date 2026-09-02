@@ -5,27 +5,35 @@
 const stamps = [
     {
         id: "https://yukigayasai2026/scan/1",
-        name: "1"
+        name: "軽音"
     },
     {
-        id: 2,
-        name: "2"
+        id: "https://yukigayasai2026/scan/2",
+        name: "茶道"
     },
     {
-        id: 3,
-        name: "3"
+        id: "https://yukigayasai2026/scan/3",
+        name: "書道"
     },
     {
-        id: 4,
-        name: "4"
+        id: "https://yukigayasai2026/scan/4",
+        name: "コンピューター"
     },
     {
-        id: 5,
-        name: "5"
+        id: "https://yukigayasai2026/scan/5",
+        name: "自然科学"
     },
     {
-        id: 5,
-        name: "6"
+        id: "https://yukigayasai2026/scan/6",
+        name: "クッキング"
+    },
+    {
+        id: "https://yukigayasai2026/scan/7",
+        name: "美術"
+    },
+    {
+        id: "https://yukigayasai2026/scan/8",
+        name: "演劇"
     }
 ];
 
@@ -76,6 +84,8 @@ function displayStamps() {
 
     stamps.forEach(function(stamp) {
 
+        
+
         // 獲得済みか確認
         const isCollected =
             collectedStamps.includes(stamp.id);
@@ -121,6 +131,7 @@ function displayStamps() {
             stampStatus.textContent = "0 / 1";
 
         }
+        
 
 
         // カードに追加
@@ -132,7 +143,19 @@ function displayStamps() {
         // 一覧に追加
         stampList.appendChild(stampCard);
 
-    });
+    } );
+    const stampTotal = document.getElementById("stamp-total");
+
+        stampTotal.textContent =
+        `${collectedStamps.length} / ${stamps.length}`;
+    const completeMessage=
+          document.getElementById("complete-message")
+
+          if (collectedStamps.length >= 5) {
+          completionMessage.textContent= `スタンプを${collectedStamps.length}獲得しました。\nCALL室でステッカーを受け取れます`;
+          } 
+
+    
 }
 
 
