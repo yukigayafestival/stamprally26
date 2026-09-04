@@ -53,7 +53,8 @@ let collectedStamps =
 const stampList =
     document.getElementById("stamp-list");
 
-
+const resetButton =
+    document.getElementById("reset-button");
 
 const scanQrButton =
     document.getElementById("scan-qr-button");
