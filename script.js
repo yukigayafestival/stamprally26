@@ -53,7 +53,8 @@ let collectedStamps =
 const stampList =
     document.getElementById("stamp-list");
 
-
+const resetButton =
+    document.getElementById("reset-button");
 
 const scanQrButton =
     document.getElementById("scan-qr-button");
@@ -371,7 +372,29 @@ function stopQrScanner() {
 // リセット
 // =========================
 
+resetButton.addEventListener(
+    "click",
+    function() {
 
+        collectedStamps = [];
+
+
+        // localStorageから削除
+        localStorage.removeItem(
+            "collectedStamps"
+        );
+
+
+        // 画面を更新
+        displayStamps();
+
+
+        showMessage(
+            "スタンプをリセットしました。"
+        );
+
+    }
+);
 // =========================
 // URLからスタンプIDを取得
 // =========================
